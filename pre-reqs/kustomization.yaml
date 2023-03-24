@@ -4,7 +4,3 @@ resources:
 - tanzu-packages-namespaces.yaml
 - tanzu-packages-cert-manager-sa.yaml
 - tanzu-packages-contour-sa.yaml
-- tanzu-packages-fluent-bit-sa.yaml
-- tanzu-packages-grafana-sa.yaml
-- tanzu-packages-harbor-sa.yaml
-- tanzu-packages-prometheus-sa.yaml
