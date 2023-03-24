@@ -10,7 +10,7 @@ metadata:
     kapp.k14s.io/create-strategy: "fallback-on-replace"
   name: cert-manager
   namespace: packages
-spec:
+spec:            # TK test
   serviceAccountName: cert-manager-packages-sa
   packageRef:
     refName: cert-manager.tanzu.vmware.com
