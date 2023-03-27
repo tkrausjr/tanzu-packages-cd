@@ -4,6 +4,7 @@ generatorOptions:
   disableNameSuffixHash: true
 resources:
 - contour-package-install.yaml
+- cert-manager-package-install.yaml
 secretGenerator:
 - name: contour-packages-values
   namespace: packages
