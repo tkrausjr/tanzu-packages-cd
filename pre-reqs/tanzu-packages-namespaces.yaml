@@ -10,7 +10,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: tanzu-packages-cd
+    name: dependencybranch-tanzu-packages-cd            # Must match the name of the GitRepo you added in TMC
     namespace: tanzu-continuousdelivery-resources
 
 
