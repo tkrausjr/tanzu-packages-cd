@@ -3,11 +3,7 @@ kind: Kustomization
 generatorOptions:
   disableNameSuffixHash: true
 resources:
-- contour-package-install.yaml
 - cert-manager-package-install.yaml
-spec:                       ## Added to test dependencies
-  dependsOn:                ## Added to test dependencies
-    - name: ./pre-reqs      ## Added to test dependencies
 secretGenerator:
 - name: contour-packages-values
   namespace: packages
