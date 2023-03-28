@@ -11,28 +11,31 @@ A sample repository for deploying Tanzu packages automatically in TMC via CD fea
 ## Setup Instructions
 1. Select the Cluster you provisioned or manage from TMC, under Add-ons click Continuous Delivery --> Enable Continuous Delivery
 2. Add the git Repository 
-	  - under Add-ons click Sources --> ADD GIT REPOSITORY
-		  - Name: tanzu-packages-cd          #
+	  - under Add-ons click Sources --> Git repositories --> ADD GIT REPOSITORY
+		  - Name: tanzu-packages-cd         
 		  - Repo:  https://github.com/tkrausjr/tanzu-packages-cd.git
 		  - Credentials: No credentials Needed
 		  - Advanced:
-			  - Branch: Main
+			  - Branch: dependencies
 
 3. Add two Kustomizations (One for pre-requisites and one for both Tanzu packages(Conour & Cert-manager))
 	  - prerequisites  
 		    - Add-Ons --> Continuous Delivery --> Installed kustomizations --> Add Kustomization
-		      - Name:   prereq-tanzu-packages
+		      - Name:  package-prereqs
 		      - Repo:  Select from Drop Down:  tanzu-packages-cd  
 		      - Path:  /pre-reqs
 		      - Advanced:  NA
+		      	- Target Namespace: <Blank>
+			- Prune: Enabled
 			- SAVE
 	  - Contour & Cert-Manager Kustomization 
 		    -Add-Ons --> Continuous Delivery --> Installed kustomizations --> Add Kustomization
-		      - Name: cert-manager-contour
+		      - Name:  development
 		      - Repo:  Select from Drop Down:  tanzu-packages-cd  
 		      - Path:  /development
 		      - Advanced:  
 			- Target Namespace:  packages
+			- Prune: Enabled
 			  - SAVE
   
   ## Validation
