@@ -25,7 +25,7 @@ spec:
       fullSyncFrequency: "1800"
       logLevel: INFO
       namespaceSelector:
-        labelKey: ""
+        labelKey: "test123"
         labelValue: ""
     ControllerSettings:
       cloudName: Default-Cloud
