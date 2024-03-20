@@ -9,14 +9,14 @@ spec:
     spec:
       chart: ako
       reconcileStrategy: Revision
-      upgrade: 
-        force: true
-        crds: CreateReplace
       sourceRef:
         kind: HelmRepository
         name: ako-helm
       version: '>1.3.0'
   interval: 1m0s
+  upgrade: 
+    force: true
+    crds: CreateReplace
   releaseName: ako-helm
   values:
     AKOSettings:
