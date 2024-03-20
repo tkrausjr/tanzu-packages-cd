@@ -9,6 +9,9 @@ spec:
     spec:
       chart: ako
       reconcileStrategy: Revision
+      upgrade: 
+        force: true
+        crds: CreateReplace
       sourceRef:
         kind: HelmRepository
         name: ako-helm
@@ -26,7 +29,7 @@ spec:
       logLevel: INFO
       namespaceSelector:
         labelKey: "spec.force"
-        labelValue: "true"
+        labelValue: "false"
     ControllerSettings:
       cloudName: Default-Cloud
       controllerHost: 192.168.203.14
